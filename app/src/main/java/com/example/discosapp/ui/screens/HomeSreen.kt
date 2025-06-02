@@ -35,7 +35,7 @@ fun HomeScreen(
     Scaffold(
         topBar = {
             ListaDiscosTopAppBar(
-                title = "DiscosApp TuNombre", // Cambia por tu nombre real
+                title = "DiscosApp Andres", // Cambia por tu nombre real
                 canNavigateBack = false
             )
         },

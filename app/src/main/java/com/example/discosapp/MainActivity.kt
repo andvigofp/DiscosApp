@@ -12,16 +12,20 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.lifecycle.viewmodel.compose.viewModel
+import com.example.discosapp.ui.DiscoViewModelFactory
 import com.example.discosapp.ui.navigation.ListaDiscosApp
 import com.example.discosapp.ui.state.DiscoViewModel
 import com.example.discosapp.ui.theme.DiscosAppTheme
 
 class MainActivity : ComponentActivity() {
-    private val viewModel: DiscoViewModel by viewModels()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
+            val viewModel: DiscoViewModel = viewModel(
+                factory = DiscoViewModelFactory(application)
+            )
             DiscosAppTheme {
                 ListaDiscosApp(viewModel = viewModel)
             }
