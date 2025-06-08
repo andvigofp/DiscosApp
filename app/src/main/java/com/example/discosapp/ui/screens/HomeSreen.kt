@@ -17,6 +17,7 @@ import androidx.compose.ui.unit.dp
 import com.example.discosapp.ui.state.DiscoViewModel
 import com.example.discosapp.data.Disco
 import androidx.compose.material.icons.filled.Delete
+import androidx.compose.material.icons.filled.Star
 
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -97,11 +98,15 @@ fun HomeScreen(
                             Column(modifier = Modifier.weight(1f)) {
                                 Text(disco.titulo, style = MaterialTheme.typography.titleMedium)
                                 Text(disco.autor, style = MaterialTheme.typography.bodyMedium)
+                                Text("Canciones: ${disco.numCanciones}", style = MaterialTheme.typography.bodySmall)
+                                Text("Año: ${disco.publicacion}", style = MaterialTheme.typography.bodySmall)
                             }
                             // Valoración en estrellas
                             Row {
                                 repeat(disco.valoracion) {
-                                    Text("⭐")
+                                    //Funciona de las dos formas
+                                    //Text("⭐")
+                                    Icon(Icons.Filled.Star, contentDescription = "")
                                 }
                             }
                             // Botón de borrar

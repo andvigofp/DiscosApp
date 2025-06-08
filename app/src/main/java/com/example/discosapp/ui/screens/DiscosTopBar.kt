@@ -17,7 +17,15 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
 import com.example.discosapp.R.string
 
+//Importate esta importante, esta importancion, referencia a String
+/**
+ * import com.example.discosapp.R.string
+ */
 
+//Tienes que añadir esto en paquete values, en string.xml
+/**
+ * <string name="back_button">Volver</string>
+ */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun ListaDiscosTopAppBar(
